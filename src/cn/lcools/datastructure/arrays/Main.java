@@ -16,7 +16,7 @@ public class Main {
         for(int score : scores){
             System.out.println(score);
         }
-        Array a = new Array(20);
+        Array<Integer> a = new Array(20);
         for (int i=0 ; i<10 ; i++)
             a.addLast(i);
         System.out.println(a);
