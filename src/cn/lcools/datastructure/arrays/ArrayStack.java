@@ -8,48 +8,46 @@ import java.util.List;
  * 动态数组栈
  */
 public class ArrayStack<E> implements Stack<E>{
+
     private List<E> list;
-    private int size;
 
     public ArrayStack(){
         list = new ArrayList();
     }
 
     public int getSize() {
-        return size;
+        return list.size();
     }
 
     @Override
     public void push(E e){
-        list.add(size,e);
-        size++;
+        list.add(list.size(),e);
     }
 
     @Override
     public E pop(){
-        E e = list.remove(size-1);
-        size --;
+        E e = list.remove(list.size()-1);
         return e;
     }
 
     @Override
     public E peek(){
-        return list.get(size-1);
+        return list.get(list.size()-1);
     }
 
     @Override
     public boolean isEmpty(){
-        return size == 0;
+        return list.isEmpty();
     }
 
     @Override
     public String toString(){
         StringBuilder res = new StringBuilder();
-        res.append(String.format("ArrayStack size = %d :\n",size));
+        res.append(String.format("ArrayStack size = %d :\n",list.size()));
         res.append("[");
-        for (int i =0 ; i<size ; i++) {
+        for (int i =0 ; i<list.size() ; i++) {
             res.append(list.get(i));
-            if (i != size-1){
+            if (i != list.size()-1){
                 res.append(",");
             }
         }
