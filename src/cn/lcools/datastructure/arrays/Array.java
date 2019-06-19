@@ -2,6 +2,7 @@ package cn.lcools.datastructure.arrays;
 
 /**
  * Created by liushuai3 on 2019/6/18.
+ * 动态数组
  */
 public class Array<E> {
     private E data[];

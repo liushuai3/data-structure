@@ -34,5 +34,14 @@ public class Main {
         a.remove(2);
         a.remove(2);
         System.out.println(a);
+
+        ArrayStack<Integer> stack = new ArrayStack<>();
+        for(int i= 0 ; i<5 ;i++){
+            stack.push(i);
+        }
+        stack.pop();
+        stack.pop();
+        System.out.println(stack);
+        System.out.println(stack.peek());
     }
 }
