@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * Created by liushuai3 on 2019/6/19.
+ * 动态数组队列
  */
 public class ArrayQueue<E> implements Queue<E>{
 
